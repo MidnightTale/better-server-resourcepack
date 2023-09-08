@@ -75,7 +75,7 @@ public class ReloadPackTask {
                 Bukkit.getLogger().info("[BSP] Updated pack hash");
                 if (push) pushPackToPlayers();
             }
-        }, 0L, 2L, TimeUnit.SECONDS);
+        }, 1, 2 * 50L, TimeUnit.MILLISECONDS);
     }
 
     private boolean saveHash() {
