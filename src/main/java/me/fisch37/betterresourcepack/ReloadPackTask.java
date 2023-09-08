@@ -52,7 +52,7 @@ public class ReloadPackTask {
     }
 
     public void start() {
-        asyncScheduler.runAtFixedRate(plugin, (task) -> {
+        asyncScheduler.runDelayed(plugin, (task) -> {
             FetchTask executingTask = new FetchTask(packInfo);
 
             if (!sync) {
@@ -75,7 +75,7 @@ public class ReloadPackTask {
                 Bukkit.getLogger().info("[BSP] Updated pack hash");
                 if (push) pushPackToPlayers();
             }
-        }, 1, 2 * 50L, TimeUnit.MILLISECONDS);
+        }, 2 * 50L, TimeUnit.MILLISECONDS);
     }
 
     private boolean saveHash() {
