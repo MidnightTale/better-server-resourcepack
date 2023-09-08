@@ -3,7 +3,7 @@ version: '${project.version}'
 main: me.fisch37.betterresourcepack.BetterServerResourcepack
 api-version: '1.19'
 description: Replaces the server resourcepack system with a more convenient implementation.
-
+folia-supported: true
 commands:
   pack:
     description: Management command for BetterServerResourcepack

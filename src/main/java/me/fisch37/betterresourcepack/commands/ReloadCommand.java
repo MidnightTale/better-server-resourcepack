@@ -3,6 +3,7 @@ package me.fisch37.betterresourcepack.commands;
 import me.fisch37.betterresourcepack.BetterServerResourcepack;
 import me.fisch37.betterresourcepack.PackInfo;
 import me.fisch37.betterresourcepack.ReloadPackTask;
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
@@ -72,7 +73,8 @@ public class ReloadCommand implements PermissibleCommand, CommandWithHelp{
                 sender,
                 this.packInfo,
                 false,
-                push
+                push,
+                Bukkit.getAsyncScheduler()
         ).start();
 
 
